@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ae4a00fe14cdba446b451d7013a44142
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objeto: {fileID: 1465599365343657405, guid: f93441df5f10d9842918c08bb24b7951,
+      type: 3}
+  - victoria: {fileID: 472403241443248814, guid: 8f80a9945f64c5a4d8d17cdcc0ff5bbb,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
