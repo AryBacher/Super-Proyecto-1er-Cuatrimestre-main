@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimeManager : MonoBehaviour
 {
     public MovimientoPersonaje barraza;
+    public MovimientoPersonaje2 barraza2;
     public Text txt_timeTime;
     float customTime;
     float ending;
@@ -22,6 +23,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         barraza = FindObjectOfType<MovimientoPersonaje>();
+        barraza2 = FindObjectOfType<MovimientoPersonaje2>();
 
         float time = Time.time;
         Debug.Log(time);
@@ -46,6 +48,7 @@ public class TimeManager : MonoBehaviour
         if (time >= ending)
         {
             barraza.victoria.text = "";
+            barraza2.victoria.text = "";
         }
     }
 }
