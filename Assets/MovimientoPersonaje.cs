@@ -70,7 +70,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "DeathWall" || col.gameObject.name == "Agua" || col.gameObject.name == "AguaGanar" || col.gameObject.tag == "Jero")
+        if (col.gameObject.name == "DeathWall" || col.gameObject.name == "Agua" || col.gameObject.name == "AguaGanar" || col.gameObject.name == "EsferaKiller" || col.gameObject.tag == "Jero" || col.gameObject.tag == "DeathSpike")
        {
             transform.position = new Vector3(4.5f, 0.5f, -13.5f);
             transform.eulerAngles = new Vector3(0,0,0);
@@ -81,7 +81,7 @@ public class MovimientoPersonaje : MonoBehaviour
             HasJump = true;
         }
 
-        if (col.gameObject.name == "Boton")
+        if (col.gameObject.tag == "Boton")
         {
             objeto.SetActive(true);
         }

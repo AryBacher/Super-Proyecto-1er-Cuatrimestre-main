@@ -66,18 +66,18 @@ public class MovimientoPersonaje2 : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "DeathWall" || col.gameObject.name == "Fuego" || col.gameObject.name == "FuegoGanar" || col.gameObject.name == "EsferaKiller")
+        if (col.gameObject.name == "DeathWall" || col.gameObject.name == "Fuego" || col.gameObject.name == "FuegoGanar" || col.gameObject.name == "EsferaKiller" || col.gameObject.tag == "Jero" || col.gameObject.tag == "DeathSpike")
         {
             transform.position = new Vector3(0, 0.5f, -13.5f);
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        if (col.gameObject.name == "Piso" || col.gameObject.name == "Agua" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.name == "Piso2" || col.gameObject.name == "Piso3")
+        if (col.gameObject.name == "Piso" || col.gameObject.name == "Agua" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.name == "Piso2" || col.gameObject.name == "Piso3" || col.gameObject.name == "PisoGanador")
         {
             HasJump = true;
         }
 
-        if (col.gameObject.name == "Boton")
+        if (col.gameObject.tag == "Boton")
         {
             objeto.SetActive(true);
         }
