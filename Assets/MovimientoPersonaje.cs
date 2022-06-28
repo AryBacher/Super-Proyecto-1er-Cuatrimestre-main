@@ -79,7 +79,7 @@ public class MovimientoPersonaje : MonoBehaviour
             transform.eulerAngles = new Vector3(0,0,0);
        }
 
-        if (col.gameObject.tag == "Piso" || col.gameObject.tag == "Fuego" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.tag == "Piso2" || col.gameObject.tag == "Piso3" || col.gameObject.name == "PisoGanador" || col.gameObject.name == "Piso")
+        if (col.gameObject.tag == "Piso" || col.gameObject.name == "Fuego" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.tag == "Piso2" || col.gameObject.tag == "Piso3" || col.gameObject.name == "PisoGanador" || col.gameObject.name == "Piso")
         {
             HasJump = true;
         }

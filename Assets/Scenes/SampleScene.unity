@@ -1214,7 +1214,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2f456518b85c2a849b3d76d07d21c8d0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4332,7 +4332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104434924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.156, y: 83.87, z: 249.264}
+  m_LocalPosition: {x: 4.5, y: 0.5, z: -13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413147172}
@@ -4495,7 +4495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1132813795
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4605,7 +4605,8 @@ MonoBehaviour:
   objeto: {fileID: 1715479748}
   victoria: {fileID: 128684685}
   bacher: {fileID: 0}
-  ObjectToClone: {fileID: 599671808}
+  ObjectToClone: {fileID: 1066753652543379619, guid: aeab990fc738d014f83febc89943f490,
+    type: 3}
   puerta: {fileID: 1523216842}
 --- !u!65 &1170850703
 BoxCollider:
@@ -4673,7 +4674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170850701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.52, z: 82.44}
+  m_LocalPosition: {x: 0, y: 0.5, z: -13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438267332}
