@@ -21,6 +21,9 @@ public class MovimientoPersonaje : MonoBehaviour
     System.Random guido2 = new System.Random();
     int ary2;
 
+    public GameObject puerta;
+    float i = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +79,7 @@ public class MovimientoPersonaje : MonoBehaviour
             transform.eulerAngles = new Vector3(0,0,0);
        }
 
-        if (col.gameObject.name == "Piso" || col.gameObject.name == "Fuego" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.name == "Piso2" || col.gameObject.name == "Piso3" || col.gameObject.name == "PisoGanador")
+        if (col.gameObject.tag == "Piso" || col.gameObject.tag == "Fuego" || col.gameObject.name == "InvisibleAgua" || col.gameObject.name == "InvisibleFuego" || col.gameObject.name == "Boton" || col.gameObject.tag == "Piso2" || col.gameObject.tag == "Piso3" || col.gameObject.name == "PisoGanador" || col.gameObject.name == "Piso")
         {
             HasJump = true;
         }
@@ -88,11 +91,14 @@ public class MovimientoPersonaje : MonoBehaviour
 
         if (col.gameObject.name == "FuegoGanar")
         {
-            victoria.text = "Ganaste Jugador 2";
-            timer_stop = true;
+            while (i <= 1)
+            {
+                puerta.transform.position = new Vector3(0,i,0);
+                i += 0.05f;
+            }
         }
 
-        if (col.gameObject.name == "Piso2" || col.gameObject.name == "Piso3")
+        if (col.gameObject.tag == "Piso2" || col.gameObject.tag == "Piso3")
         {
             rb.constraints = RigidbodyConstraints.FreezePositionX;
             rb.constraints = RigidbodyConstraints.FreezePositionY;
@@ -104,7 +110,7 @@ public class MovimientoPersonaje : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
-        if (col.gameObject.name == "Piso3")
+        if (col.gameObject.tag == "Piso3")
         {
             Task.Delay(1500);
             for (int i = 0; i <= ary; i++)
@@ -116,6 +122,12 @@ public class MovimientoPersonaje : MonoBehaviour
 
             ary = guido.Next(1, 6);
             ary2 = guido2.Next(-13, 13);
+        }
+
+        if (col.gameObject.tag == "Ganar")
+        {
+            victoria.text = "Ganaste Jugador 2";
+            timer_stop = true;
         }
     }
 }

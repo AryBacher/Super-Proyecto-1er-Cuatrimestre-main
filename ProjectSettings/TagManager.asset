@@ -8,6 +8,10 @@ TagManager:
   - Jero
   - DeathSpike
   - Boton
+  - Ganar
+  - Piso
+  - Piso2
+  - Piso3
   layers:
   - Default
   - TransparentFX
